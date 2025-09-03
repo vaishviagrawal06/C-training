@@ -1,15 +1,14 @@
 #include <stdio.h>
-int main(){
-    int  num = 321;
-    int res =0;
-    while(num!=0){
-        int lastdigit =num % 10;
-        res =res*10 + lastdigit;
-       num = num/10;
 
-    }
-    printf("reverse of number is %d",res);
-
-
+int main() {
+    int n,fact =1;
+    
+  printf("enter a number");
+  scanf("%d",&n);
+  while(n>0){
+    fact*=n;
+    n--;
+  }
+  printf("fatorial of number %d",fact);
     return 0;
 }
