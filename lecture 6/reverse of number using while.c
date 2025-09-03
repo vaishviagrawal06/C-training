@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
-    int  num = 321;
+    int  num = 121;
+    int org = num;
     int res =0;
     while(num!=0){
         int lastdigit =num % 10;
