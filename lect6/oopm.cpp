@@ -1,16 +1,17 @@
-#include <stdio.h>
-#include <string.h>
+#include<iostream>
+using namespace std;
 
-int main() {
-    int myAGE = 19;
-    int age = 25;
-    if(myAGE > age){
-        printf("i am older");
-    
-    }
-    else{
-        printf("i am younger");
-    }
-
-    return 0;
-}
+class MyClass {
+    public:
+        void displayPattern(int n) {
+            for(int i=0; i<n; i++) {
+                for(int j=0; j<n; j++) {
+                    if(i==0 || i==n-1 || j==0 || j==n-1) {
+                        cout << " *";
+                    } else {
+                        cout << "  ";
+                    }
+                }
+                cout << endl;
+            }
+        }
