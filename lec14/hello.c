@@ -1,27 +1,32 @@
 #include <stdio.h>
 
-int maxarraysum(int arr[], int n,int k){
-    int maxsum =0;
-    for(int i=0;i<=n-k;i++){
-        int currsum=0;
-       for(int j=i;j<i+k;j++){
-              currsum = currsum+arr[j];
-         if(currsum>maxsum){
-            maxsum=currsum;
+int main() {
+    int size = 3;
+    int square[3][3] = {0};
 
-       }
+    int row = 0, col = size / 2;
+
+    for (int val = 1; val <= size * size; val++) {
+        square[row][col] = val;
+
+        int nextRow = (row - 1 + size) % size;
+        int nextCol = (col + 1) % size;
+
+        if (square[nextRow][nextCol] != 0) {
+            row = (row + 1) % size;
+        } else {
+            row = nextRow;
+            col = nextCol;
+        }
     }
-    return maxsum;
-}
-}
 
-int main(){
-    int arr[5]={1,2,3,2,4};
-    int k=3;
-
-    int n=sizeof(arr)/sizeof(arr[0]);
-    printf("Maximum sum of elements is %d\n",maxarraysum(arr,n,k));
+    printf("Magic Square (%dx%d):\n", size, size);
+    for (int r = 0; r < size; r++) {
+        for (int c = 0; c < size; c++) {
+            printf("%3d ", square[r][c]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
-
