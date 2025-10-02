@@ -1,9 +1,9 @@
-#include <stdio.h>
 //pattern
 /*    * * * * *
       * *   * *
       *       *    */
-
+     
+#include <stdio.h>
 int main()
 {
     int n = 4;
@@ -23,7 +23,7 @@ int main()
         {
             printf("  ");
         }
-        for(int p=i;p<n;p++)
+        for(int p = i; p < n - (i == 0 ? 1 : 0); p++) 
         {
             printf("* ");
         }
