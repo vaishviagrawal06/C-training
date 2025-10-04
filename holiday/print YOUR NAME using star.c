@@ -37,7 +37,7 @@ int main()
         
         for (int k = 0; k < 3; k++)
         {
-            if (i==0 || i == mid ||i == last || (i<mid  && k == 1)|| (i>mid && k==1))
+            if (i==0 ||i == last || k==mid-1)
             {
                 printf("* ");
             }
@@ -52,7 +52,7 @@ int main()
 
         for (int l = 0; l < 3; l++)
         {
-            if (i==0 || i == mid ||i == last || (i<mid  && l == 0)|| (i>mid && l==2))
+            if (i==0||i== mid || i == last || (i<mid  && l == 0)|| (i>mid && l==2))
             {
                 printf("* ");
             }
@@ -80,7 +80,7 @@ int main()
         }
         printf("  ");
 
-        for (int v = 0; v < 2 * n - 1; v++) // make it wider
+        for (int v = 0; v < 2 * n - 1; v++) 
         {
             if (v == i || v == (2 * n - 2 - i))
             {
@@ -96,7 +96,7 @@ int main()
 
         for (int p = 0; p < 3; p++)
         {
-            if (i==0 || i == mid ||i == last || (i<mid  && p == 1)|| (i>mid && p==1))
+            if (i==0 ||i == last || p==mid-1)
             {
                 printf("* ");
             }
